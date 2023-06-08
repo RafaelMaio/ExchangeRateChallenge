@@ -18,6 +18,4 @@ public class ExchangeRateLatest {
     private String base;
     private String date;
     Map<String, Double> rates;
-
-
 }
