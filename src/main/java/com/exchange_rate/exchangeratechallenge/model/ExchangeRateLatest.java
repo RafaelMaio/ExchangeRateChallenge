@@ -3,7 +3,6 @@ package com.exchange_rate.exchangeratechallenge.model;
 
 import lombok.*;
 
-import java.util.Dictionary;
 import java.util.Map;
 
 @Getter
