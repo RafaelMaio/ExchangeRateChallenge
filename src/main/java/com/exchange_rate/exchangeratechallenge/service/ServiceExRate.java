@@ -10,19 +10,19 @@ import java.util.Map;
 @Service
 public class ServiceExRate {
 
-    private final ServiceExRate_FetchData serviceExRate_fetchData;
+    private final ServiceFetchData servicefetchData;
 
     @Autowired
-    public ServiceExRate(ServiceExRate_FetchData serviceExRate_fetchData){
-        this.serviceExRate_fetchData = serviceExRate_fetchData;
+    public ServiceExRate(ServiceFetchData serviceExRate_fetchData){
+        this.servicefetchData = serviceExRate_fetchData;
     }
 
     public Map<String, Double> getExchangeData(){
-        return serviceExRate_fetchData.getExchangeData().getRates();
+        return servicefetchData.getExchangeData().getRates();
     }
 
     public Double getExchangeRateCA_CB(String currencyA, String currencyB){
-        ExchangeRateLatest exchangeRateLatest = serviceExRate_fetchData.getExchangeData();
+        ExchangeRateLatest exchangeRateLatest = servicefetchData.getExchangeData();
         Double currencyA_Value = exchangeRateLatest.getRates().get(currencyA);
         Double currencyB_Value = exchangeRateLatest.getRates().get(currencyB);
         if(currencyA_Value == null){
@@ -37,7 +37,7 @@ public class ServiceExRate {
     }
 
     public Map<String, Double> getExchangeRateCA_All(String currencyA){
-        ExchangeRateLatest exchangeRateLatest = serviceExRate_fetchData.getExchangeData();
+        ExchangeRateLatest exchangeRateLatest = servicefetchData.getExchangeData();
         Double currencyA_Value = exchangeRateLatest.getRates().get(currencyA);
         if(currencyA_Value == null){
             throw new ApiRequestException("Currency A does not exist");

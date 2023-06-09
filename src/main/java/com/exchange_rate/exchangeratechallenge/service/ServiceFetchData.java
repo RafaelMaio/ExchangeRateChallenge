@@ -4,16 +4,15 @@ import com.exchange_rate.exchangeratechallenge.exceptions.ApiRequestException;
 import com.exchange_rate.exchangeratechallenge.model.ExchangeRateLatest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class ServiceExRate_FetchData {
+public class ServiceFetchData {
     private final RestTemplate restTemplate;
 
     @Autowired
-    public ServiceExRate_FetchData(RestTemplate restTemplate) {
+    public ServiceFetchData(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
