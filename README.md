@@ -15,15 +15,15 @@ API that fetches exchange-rates from an external API (https://exchangerate.host)
 1. Run redis
     - Open WLS (Linux terminal on windows)
     - Run the command
-    '''
+    ```
     sudo service redis-server start
-    '''
+    ```
 2. Run spring boot application
     - Open command prompt
     - Go the ExchangeRateChallenge package directory
     - Run the commands
-    '''
+    ```
     mvn clean install
     mvn spring-boot:run
-    '''
+    ```
 3. Use Swagger UI on: http://localhost:8080/swagger-ui/index.html
