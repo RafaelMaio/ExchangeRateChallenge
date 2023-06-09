@@ -3,6 +3,7 @@ package com.exchange_rate.exchangeratechallenge.model;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.Map;
 
 @Getter
@@ -11,7 +12,7 @@ import java.util.Map;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class ExchangeRateLatest {
+public class ExchangeRateLatest implements Serializable {
     private Motd motd;
     private Boolean success;
     private String base;
