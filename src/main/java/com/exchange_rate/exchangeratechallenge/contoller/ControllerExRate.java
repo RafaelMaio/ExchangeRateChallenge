@@ -89,5 +89,4 @@ public class ControllerExRate {
             @Parameter(description = "Value to convert") @RequestParam Double value){
         return serviceExRate.getValueConversionCA_All(currencyA, value);
     }
-
 }
